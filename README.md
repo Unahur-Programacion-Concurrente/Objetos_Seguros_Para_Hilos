@@ -1,4 +1,4 @@
-# Ejercicios con Locks
+# Condición de Sincronización - Ejercicios con Locks
 
 ## Cola FIFO compartida
 
