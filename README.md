@@ -63,18 +63,14 @@ El script incluye una función ***main()*** cuyo propósito es probar los métod
     **Las threads deben permanecer ejecutándose indefinidamente, no debe terminar el programa después de lanzarlas. Coloque todo el código que sea necesario para esto.**
 
 3. Ejecute el programa y analice los resultados. Obtiene en alguna de las ejecuciones datos inconsistentes o errores? En caso afirmativo, analice los resultados identificando las causas de las inconsistencias o errores.
-
 4. Modifique el programa anterior de modo que los hilos tengan en cuenta los casos en que la cola está vacía.
-
 6. Modifique el programa anterior modificando la clase ColaFIFO de modo que sus métodos tengan en cuenta los casos en que la cola está vacía.
-
 8. Repita el primer ejercicio utilizando la clase ColaFIFOmax para instanciar una cola de tamaño (size) 10 y modifique los retardos de productor y consumidor de modo que queden los dos iguales (1 segundo).
-
 9. Ejecute el programa y observe los resultados explicando lo que observa.
-10. Repetir el ejercicio anterior modificando la clase ColaFIFImax de modo que considere los casos de cola llena y cola vacía.
-11. Es segura para hilos la clase del ejercicio anterior? Por que?
-12. Modificar el ejercicio anterior de modo que se puedan lanzar un número cualquiera de hilos productor y consumidor y observe los resultados al ejecutarlo.
-13. Modificar el ejercicio anterior utilizando locks cada vez que se accede al objeto compartido cola dentro de los hilos (sin modificar la clase). Ejecute el programa y observe los resultados.
-14. Que errores observa? Hay condiciones de carrera?
-15. Modificar la clase ColaFIFOmax de modo que sea Segura para Hilos.
-16. Volver a escribir el ejercicio anterior comprobando que no se producen condiciones de carrera ni bloqueos.
+11. Repetir el ejercicio anterior modificando la clase ColaFIFOmax de modo que considere los casos de cola llena y cola vacía.
+13. Es segura para hilos la clase del ejercicio anterior? Por que?
+14. Modificar el ejercicio anterior de modo que se puedan lanzar un número cualquiera de hilos productor y consumidor y observe los resultados al ejecutarlo.
+15. Modificar el ejercicio anterior utilizando locks cada vez que se accede al objeto compartido cola dentro de los hilos (sin modificar la clase). Ejecute el programa y observe los resultados.
+16. Que errores observa? Hay condiciones de carrera?
+17. Modificar la clase ColaFIFOmax de modo que sea Segura para Hilos.
+18. Volver a escribir el ejercicio anterior comprobando que no se producen condiciones de carrera ni bloqueos.
