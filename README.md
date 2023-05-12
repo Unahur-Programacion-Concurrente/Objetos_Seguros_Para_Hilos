@@ -74,3 +74,9 @@ El script incluye una función ***main()*** cuyo propósito es probar los métod
 16. Que errores observa? Hay condiciones de carrera?
 17. Modificar la clase ColaFIFOmax de modo que sea Segura para Hilos.
 18. Volver a escribir el ejercicio anterior comprobando que no se producen condiciones de carrera ni bloqueos.
+
+
+
+
+
+
