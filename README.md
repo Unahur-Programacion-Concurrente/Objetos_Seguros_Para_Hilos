@@ -76,7 +76,3 @@ El script incluye una función ***main()*** cuyo propósito es probar los métod
 18. Volver a escribir el ejercicio anterior comprobando que no se producen condiciones de carrera ni bloqueos.
 
 
-
-
-
-
