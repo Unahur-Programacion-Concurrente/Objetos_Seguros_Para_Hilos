@@ -1,23 +1,27 @@
 """
-Ejemplo de Libería Impementando una cola FIFO de tamaño infinito
-
+Ejemplo de Libería Impementando una cola FIFO de tamaño finito
 """
+class ColaFIFOmax():
 
-
-class ColaFIFO:
-
-    def __init__(self):
+    def __init__(self, size):
         self.elementos = []
         self.cola_vacia = True
+        self.cola_llena = False
+        self.size = size
 
     def insertar(self, dato):
-        self.elementos.append(dato)
-        self.cola_vacia = self.esta_vacia()
-        return dato
+        if self.cola_llena:
+            raise Exception('Esta intentando insertar en una cola llena!')
+        else:
+            self.elementos.append(dato)
+            self.cola_vacia = self.esta_vacia()
+            self.cola_llena = self.esta_llena()
+            return dato
 
     def extraer(self):
         elemento = self.elementos.pop(0)
         self.cola_vacia = self.esta_vacia()
+        self.cola_llena = self.esta_llena()
         return elemento
 
     def ultimo(self):
@@ -29,21 +33,24 @@ class ColaFIFO:
     def esta_vacia(self):
         return len(self.elementos) == 0
 
+    def esta_llena(self):
+        return len(self.elementos) == self.size
+
     def cantidad_elementos(self):
         return len(self.elementos)
 
 
 def main():
-    cola = ColaFIFO()
+    cola = ColaFIFOmax(5)
 
     # check if esta_vacia()
 
-    print(cola.esta_vacia())
+    print(cola.cola_vacia)
 
     for i in range (1,6):
         cola.insertar(i)
 
-    print(cola.cola_vacia)
+    print(cola.esta_vacia())
     print(cola.cantidad_elementos())
 
     print(cola.primero(),cola.ultimo())
@@ -56,8 +63,16 @@ def main():
     cola.extraer()
     cola.extraer()
 
-    print(cola.cola_vacia)
+    print(cola.esta_vacia())
     print(cola.cantidad_elementos())
+
+    try:
+        for k in range(1,7):
+            cola.insertar(k)
+    except:
+        print("Ocurrio una excepcion")
+
+
 
 if __name__ == '__main__':
     main()
