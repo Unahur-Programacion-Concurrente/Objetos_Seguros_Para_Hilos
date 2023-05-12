@@ -76,5 +76,5 @@ El script incluye una función ***main()*** cuyo propósito es probar los métod
 12. Modificar el ejercicio anterior de modo que se puedan lanzar un número cualquiera de hilos productor y consumidor y observe los resultados al ejecutarlo.
 13. Modificar el ejercicio anterior utilizando locks cada vez que se accede al objeto compartido cola dentro de los hilos (sin modificar la clase). Ejecute el programa y observe los resultados.
 14. Que errores observa? Hay condiciones de carrera?
-15. Modificar la clase ColaFIFImax de modo que sea Segura para Hilos.
+15. Modificar la clase ColaFIFOmax de modo que sea Segura para Hilos.
 16. Volver a escribir el ejercicio anterior comprobando que no se producen condiciones de carrera ni bloqueos.
