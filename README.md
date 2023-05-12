@@ -1,4 +1,4 @@
-# Condición de Sincronización - Ejercicios con Locks
+# Objetos Seguros para Hilos
 
 ## Cola FIFO compartida
 
