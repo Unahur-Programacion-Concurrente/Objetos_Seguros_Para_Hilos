@@ -19,8 +19,8 @@ class Productor(threading.Thread):
     def run(self):
         while True:
             lock.acquire()
-            self.cola.insertar(random.randint(0,100))
             try:
+                self.cola.insertar(random.randint(0,100))
                 logging.info(f'esta produciendo {self.cola.ultimo()}')
             finally:
                 lock.release()
