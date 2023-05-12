@@ -58,14 +58,22 @@ El script incluye una función ***main()*** cuyo propósito es probar los métod
       p1 = threading.Thread(target=prod, args=(cola, 2))  
     ```
 
-    **Preferentemente, implementar estas threads a partir de clases derivadas de Thread que reciban como argumento el objeto de clase ColaFIFO instanciado y el valor numérico de retardo, en vez de hacerlo directamente del módulo threading.**
+    **Implementar estas threads a partir de clases derivadas de Thread que reciban como argumento el objeto de clase ColaFIFO instanciado y el valor numérico de retardo**
 
     **Las threads deben permanecer ejecutándose indefinidamente, no debe terminar el programa después de lanzarlas. Coloque todo el código que sea necesario para esto.**
 
 3. Ejecute el programa y analice los resultados. Obtiene en alguna de las ejecuciones datos inconsistentes o errores? En caso afirmativo, analice los resultados identificando las causas de las inconsistencias o errores.
 
-4. Como modificaría la clase ***ColaFIFO*** de modo que su constructor reciba un argumento “size” que establezca el tamaño máximo (cantidad de elementos) de la cola, y modifique los métodos que sean necesarios para asegurar que la cantidad de elementos en la cola no supere esa cantidad de elementos.
+4. Modifique el programa anterior de modo que los hilos tengan en cuenta los casos en que la cola está vacía.
 
-5. Modifique el programa de modo de instanciar una nueva cola de tamaño (size) 10 y modifique los retardos de productor y consumidor de modo que queden los dos iguales (1 segundo).
+6. Modifique el programa anterior modificando la clase ColaFIFO de modo que sus métodos tengan en cuenta los casos en que la cola está vacía.
 
-6. Ejecute el programa y observe los resultados explicando lo que observa.
+8. Repita el primer ejercicio utilizando la clase ColaFIFOmax para instanciar una cola de tamaño (size) 10 y modifique los retardos de productor y consumidor de modo que queden los dos iguales (1 segundo).
+
+9. Ejecute el programa y observe los resultados explicando lo que observa.
+10. Repetir el ejercicio anterior modificando la clase ColaFIFImax de modo que considere los casos de cola llena y cola vacía.
+11. Es segura para hilos la clase del ejercicio anterior? Por que?
+12. Modificar el ejercicio anterior de modo que se puedan lanzar un número cualquiera de hilos productor y consumidor y observe los resultados al ejecutarlo.
+13. Modificar el ejercicio anterior utilizando locks cada vez que se accede al objeto compartido cola dentro de los hilos (sin modificar la clase). Ejecute el programa y observe los resultados.
+14. Que errores observa? Hay condiciones de carrera?
+15. Modificar la clase ColaFIFImax de modo que sea Segura para Hilos y vuelva a escribir el ejercicio anterior comprobando que no se producen condiciones de carrera ni bloqueos.
